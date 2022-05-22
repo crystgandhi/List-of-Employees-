@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+     <style>
+         .note {
+             color: blue;
+             background-color: bisque;
+             text-align: center
+         }
+         table, th, td {
+             border: 1px solid black;
+         }
+         .color {
+             margin-top: 20px;
+             margin-left: 500px;
+             margin-right: 500px;
+         }
+         .note1 {
+             color: black;
+             background-color: bisque;
+             text-align:center
+         }
+     </style>
+    <title> Employee list</title>
+ </head>
+ <body>
+     <div class="note color" />
+        <h1>List of Employees</h1>
+     </div>
+
+     <table class="note1 color">
+         <tr>
+             {% for header in theader %}
+             <th>{{ header }}</th>
+             {% endfor %}
+         </tr>
+         {% for row in data %}
+         <tr>
+             {% for cell in row %}
+             <td>
+                 {{ cell }}
+             </td>
+             {% endfor %}
+         </tr>
+         {% endfor %}
+     </table>
+ </body>
+</html>
